@@ -1,3 +1,4 @@
+import { l } from "maath/dist/misc-7d870b3c.esm";
 import {
   mobile,
   backend,
@@ -24,6 +25,15 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+import frontend from "../assets/frontend.png";
+import cplusplus from "../assets/tech/cplusplus.png";
+import c from "../assets/tech/c.png";
+import sql from "../assets/tech/sql.png";
+import java from "../assets/tech/java.png";
+import gfg from "../assets/company/gfg.png";
+import chegg from "../assets/company/chegg.jpg";
+import tnp from "../assets/company/tnp.png";
+import codingclub from "../assets/company/codingclub.jpg";
 
 export const navLinks = [
   {
@@ -42,19 +52,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Software Development",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Frontend Development",
+    icon: frontend,
   },
   {
-    title: "Backend Developer",
+    title: "Backend Development",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Technical Writing",
     icon: creator,
   },
 ];
@@ -85,10 +95,6 @@ const technologies = [
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
   },
@@ -97,74 +103,72 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "C++",
+    icon: cplusplus,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "C",
+    icon: c,
+  },
+  {
+    name: "SQL",
+    icon: sql,
+  },
+  {
+    name: "Java",
+    icon: java,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "TCW Intern",
+    company_name: "GeeksForGeeks",
+    icon: gfg,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Aug 2022 - Nov 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "written technical articles on various aspects of computer science.",
+      "15+ Articles published till date related to DSA, C++, Linux, Git, Shell & Web Development domain.",
+      "Published articles are available at geeksforgeeks.org/user/jeetamar__singh/articles",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "T&P Co-Ordinator",
+    company_name: "Placement Cell CITK",
+    icon: tnp,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "June 2021 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Serving as a T&P Co-ordinator for the Placement cell of my College.",
+      "Co-ordinating and managing the placement opportunities for the CSE Students.",
+      "Acting as a bridge between organization and college.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Subject Matter Expert",
+    company_name: "Chegg",
+    icon: chegg,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Nov 2022 - Feb 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Solved the doubt of students related to Computer science and engineering domains especially related to DSA and Coding.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Secretary & Coding Tutor",
+    company_name: "Coding Club CITK",
+    icon: codingclub,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Apr 2022 - May 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I have served as a Secretary of the Coding Club CITK which is the coding society of CIT Kokrajhar.",
+      "Taught C/C++ Programming and organized 10+ Events/Workshops related to Coding.",
+      "Responsible for managing the entire team of the club.",
     ],
   },
 ];

@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import Typed from 'typed.js';
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
@@ -36,6 +38,30 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  
+  useEffect(() => {
+    // Configuration for the Typed instance
+    const options2 = {
+      strings: ["I am an 2024 undergrad in computer science engineering who has solved 500+ questions on LeetCode, GeeksforGeeks and more to improve my data structures and algorithms. I am skilled JavaScript, C/C++ and expertise in frameworks like React, Node.js. I am a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems also As a hobby, I teach C/C++ programming. Currently looking for software development engineering internship (SDE) / web dev internship/ Full-Time opportunities."],
+      typeSpeed: 20,
+      loop: false,
+    };
+
+    // Target the element with the "typing" class
+    const targetElements = document.querySelector(".typing1");
+
+    if (targetElements) {
+      // Create a new Typed instance
+      const typed1 = new Typed(targetElements, options2);
+
+      // Cleanup on unmount
+      return () => {
+        typed1.destroy();
+      };
+    }
+  }, []);
+
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -46,12 +72,7 @@ const About = () => {
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+      ><span class="typing1"></span>
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

@@ -1,9 +1,34 @@
 import { motion } from "framer-motion";
-
+import React, { useState, useEffect } from 'react';
+import Typed from 'typed.js';
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
+
 const Hero = () => {
+
+  useEffect(() => {
+    // Configuration for the Typed instance
+    const options = {
+      strings: ["Software Developer", "Web Developer", "Technical Content writer"],
+      typeSpeed: 100,
+      loop: true,
+    };
+  
+    // Target the element with the "typing" class
+    const targetElement = document.querySelector(".typing");
+  
+    if (targetElement) {
+      // Create a new Typed instance
+      const typed = new Typed(targetElement, options);
+  
+      // Cleanup on unmount
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, []);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -20,7 +45,7 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             CSE Undergrad'24 <br className="sm:block hidden" />
-            interfaces and web applications
+            <span class="typing"></span>
           </p>
         </div>
       </div>
