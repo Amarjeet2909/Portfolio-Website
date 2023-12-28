@@ -43,7 +43,7 @@ const About = () => {
     // Configuration for the Typed instance
     const options2 = {
       strings: ["I am an 2024 undergrad in computer science engineering who has solved 500+ questions on LeetCode, GeeksforGeeks and more to improve my data structures and algorithms. I am skilled JavaScript, C/C++ and expertise in frameworks like React, Node.js. I am a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems also As a hobby, I teach C/C++ programming. Currently looking for software development engineering internship (SDE) / web dev internship/ Full-Time opportunities."],
-      typeSpeed: 20,
+      typeSpeed: 2,
       loop: false,
     };
 

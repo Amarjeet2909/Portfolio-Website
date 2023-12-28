@@ -34,6 +34,8 @@ import gfg from "../assets/company/gfg.png";
 import chegg from "../assets/company/chegg.jpg";
 import tnp from "../assets/company/tnp.png";
 import codingclub from "../assets/company/codingclub.jpg";
+import Shopvista from "../assets/Shopvista.png";
+import portfolio from "../assets/portfolio.png";
 
 export const navLinks = [
   {
@@ -202,12 +204,12 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "ShopVista",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "It's an Full Stack Web application based on MERN Stack Development. It's an E cart type application which is used to purchase various items available, It supports Login, Authentication, Password reset, Payment option, save cart, admin panel for sellers, search and other various functionalities.",
     tags: [
       {
-        name: "react",
+        name: "MERN",
         color: "blue-text-gradient",
       },
       {
@@ -215,54 +217,67 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Node.js",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: Shopvista,
+    source_code_link: "https://github.com/Amarjeet2909/E-Cart-MERN-Project",
   },
   {
-    name: "Job IT",
+    name: "T&P Portal",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Official Website of Placement Cell CITK. It is an React based application using different routes, concept of useState, fragment, switch, props. It's an fully responsive website currently in use of CIT Kokrajhar for it's T&P cell activities",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "frontend",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Amarjeet2909/Placement-Cell-Portal",
   },
   {
-    name: "Trip Guide",
+    name: "Diabetes Predictor",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "An application of Machine learning based diabetes prediction, In this project patient dataset has been taken and the various ML models is prepared for predicting diabetes and based on that prediction the appropriate Health Insurance Policy will be suggested.",
     tags: [
       {
-        name: "nextjs",
+        name: "ML",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "python",
         color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Amarjeet2909/Application-of-ML-based-Diabetes-Prediction-model",
+  },
+  {
+    name: "Singh Portfolio",
+    description:
+      "An Amazing 3D portfolio website developed using ThreeJS and ReactJS, used powerful graphics library for rendering and animation. It contains all the neccessary information to reflect a good portfolio of a developer.",
+    tags: [
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "three.js",
+        color: "green-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/Amarjeet2909",
   },
 ];
 

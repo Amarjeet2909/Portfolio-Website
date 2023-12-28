@@ -22,7 +22,7 @@ const Stars = (props) => {
           sizeAttenuation={true}
           depthWrite={false}
         />
-      </Points>
+      </Points>0
     </group>
   );
 };
