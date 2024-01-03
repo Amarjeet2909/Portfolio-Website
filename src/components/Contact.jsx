@@ -27,16 +27,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_r0jcplm",
-        "template_1t76uxq",
+        "service_h4vyh4v",
+        "template_nohaukg",
         {
-          form_name: form.name,
-          to_name: "Liron",
+          from_name: form.name,
+          to_name: "Amarjeet",
           from_email: form.email,
-          to_email: "contact@mail.com",
+          to_email: "ak4348225@gmail.com",
           message: form.message,
         },
-        "Jqq9AvwIuSjoMiA5c"
+        "eLEXtDqxtTgskyDA8"
       )
       .then(
         () => {
@@ -66,7 +66,7 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
+        <p className={styles.sectionSubText}>Get in touch with me</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
@@ -81,7 +81,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder="Write your message"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -103,7 +103,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What do you want to say?"
+              placeholder="Write your message"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -118,8 +118,8 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        variants={slideIn("right", "tween", 0.6, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[300px]"
       >
         <EarthCanvas />
       </motion.div>
