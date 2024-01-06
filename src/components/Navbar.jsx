@@ -50,9 +50,7 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
+      } w-full flex items-center py-2 fixed top-0 z-20 bg-black`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -65,7 +63,6 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="w-15 h-12 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Amarjeet &nbsp;
-            <span className="sm:block hidden"> | Portfolio</span>
           </p>
         </Link>
 
@@ -77,7 +74,7 @@ const Navbar = () => {
                 active === nav.id ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>

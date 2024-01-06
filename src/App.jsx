@@ -23,15 +23,15 @@ function App() {
             <Hero />
             </div>
             <About />
-            <Experience />
             <Tech />
-            <Works />
             <div className="relative z-0">
               <Contact />
               <StarsCanvas />
             </div>
           </>} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/Experience" element={<Experience />} />
+          <Route path="/Projects" element={<Works />} />
         </Routes>
       </div>
     </Router>

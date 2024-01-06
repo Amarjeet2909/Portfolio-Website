@@ -11,6 +11,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import Navbar from "./Navbar";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -59,9 +60,10 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
+      <Navbar />
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <p style={{ marginTop: "60px", marginLeft: "4%"}} className={styles.sectionSubText}>What I have done so far</p>
+        <h2 style={{ marginLeft: "4%"}} className={styles.sectionHeadText}>Work Experience.</h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
@@ -75,4 +77,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default Experience;

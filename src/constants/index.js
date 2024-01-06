@@ -39,16 +39,20 @@ import portfolio from "../assets/portfolio.png";
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: "/",
+    title: "Home",
   },
   {
-    id: "work",
+    id: "/Projects",
     title: "Work",
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: "/Experience",
+    title: "Experience",
+  },
+  {
+    id: "/Gallery",
+    title: "Gallery",
   },
 ];
 
