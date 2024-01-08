@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Typed from 'typed.js';
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import "./Styles/hero.css";
 
 
 const Hero = () => {
@@ -47,6 +48,7 @@ const Hero = () => {
             CSE Undergrad'24 <br className="sm:block hidden" />
             <span class="typing"></span>
           </p>
+
         </div>
       </div>
       

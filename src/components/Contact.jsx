@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import "./Styles/contact.css";
 
 const Contact = () => {
   const formRef = useRef();
@@ -59,6 +60,21 @@ const Contact = () => {
   };
 
   return (
+    <div className="video-container">
+
+      <div className="video-wrapper">
+      <iframe
+      class="youtube-video"
+      width="70%"
+      height="450"
+      src="https://www.youtube-nocookie.com/embed/es4x5R-rV9s?showinfo=0&controls=0&rel=0"
+      title="YouTube Video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      sandbox="allow-same-origin allow-scripts"
+      ></iframe>
+      </div>
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
@@ -123,6 +139,7 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+    </div>
     </div>
   );
 };

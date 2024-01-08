@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CloseIcon from '@material-ui/icons/Close';
+import CancelPresentationIcon from '@material-ui/icons/CancelPresentation';
 import imag1 from "../assets/Gallery/i1.jpeg";
 import imag2 from "../assets/Gallery/i2.jpg";
 import imag3 from "../assets/Gallery/i3.jpg";
@@ -20,7 +20,7 @@ import imag17 from "../assets/Gallery/i17.jpeg";
 import imag18 from "../assets/Gallery/i18.jpeg";
 import imag19 from "../assets/Gallery/i19.jpg";
 import imag20 from "../assets/Gallery/i20.jpeg";
-import imag21 from "../assets/Gallery/i21.jpg";
+import imag21 from "../assets/Gallery/i21.jpeg";
 import imag22 from "../assets/Gallery/i22.jpg";
 import imag23 from "../assets/Gallery/i23.png";
 
@@ -47,7 +47,7 @@ const Gallery = () => {
         {
             id: 4,
             imgSrc: imag4,
-            caption: "On the campus of Himalayan mountaining Institue Darjeeling",
+            caption: "All Tech Clubs together in the Bodoland International Knowledge Fest",
         },
         {
             id: 5,
@@ -72,7 +72,7 @@ const Gallery = () => {
         {
             id: 9,
             imgSrc: imag9,
-            caption: "My Major Project Group of my College",
+            caption: "My Major Project Group of the college after the presentation",
         },
         {
             id: 10,
@@ -87,57 +87,57 @@ const Gallery = () => {
         {
             id: 12,
             imgSrc: imag12,
-            caption: "Inguration",
+            caption: "Inauguration cum  Orientation event of Coding Society of CITK lead by me",
         },
         {
             id: 13,
             imgSrc: imag13,
-            caption: "Caption for Image 1",
+            caption: "Giving orientation about Coding Club to the student's",
         },
         {
             id: 14,
             imgSrc: imag14,
-            caption: "Caption for Image 1",
+            caption: "On the campus of Himalayan mountaining Institue Darjeeling",
         },
         {
             id: 15,
             imgSrc: imag15,
-            caption: "Caption for Image 1",
+            caption: "At Brahmaputra River front museum Guwahati (Assam)",
         },
         {
             id: 16,
             imgSrc: imag16,
-            caption: "Caption for Image 1",
+            caption: "With the Group of student's from CITK in Interation program with CM of Assam at IT Park Kokrajhar",
         },
         {
             id: 17,
             imgSrc: imag17,
-            caption: "Caption for Image 1",
+            caption: "In the Cultural fest of College named Ecstacy",
         },
         {
             id: 18,
             imgSrc: imag18,
-            caption: "Caption for Image 1",
+            caption: "Representing Coding Club as a Secretary",
         },
         {
             id: 19,
             imgSrc: imag19,
-            caption: "Caption for Image 1",
+            caption: "As a Campus Ambassador of GeeksforGeeks for CITK",
         },
         {
             id: 20,
             imgSrc: imag20,
-            caption: "Caption for Image 1",
+            caption: "All Clubs Together with the Dean AER & Faculty Incharge of Tech Board",
         },
         {
             id: 21,
             imgSrc: imag21,
-            caption: "Caption for Image 1",
+            caption: "Workshop on python prgramming during Tech Fest (Techcracy)",
         },
         {
             id: 22,
             imgSrc: imag22,
-            caption: "Caption for Image 1",
+            caption: "Certificate distribution of Coding competition by Coding Club",
         },
 
     ]
@@ -171,7 +171,7 @@ const Gallery = () => {
             <div className={model ? 'model open' : 'model'}>
                 <img src={data[tempImgIndex]?.imgSrc} alt="enlarged" />
                 {/* CloseIcon component to close the modal */}
-                <CloseIcon onClick={closeModal} />
+                <CancelPresentationIcon onClick={closeModal} />
                 <p>{data[tempImgIndex]?.caption}</p>
                 {/* Navigation for previous and next images */}
                 <div className="nav-buttons">
