@@ -5,7 +5,7 @@
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
     padding: 0 5px;
-    background-color: #ffffff;
+    background-color: black;
 }
 
 .gallery .pics {
@@ -24,7 +24,7 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.3s ease;
-    background-color: Yellow;
+    background-color: white;
     color: black;
     padding: 5px 10px;
     border-radius: 3px;

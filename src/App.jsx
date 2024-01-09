@@ -11,6 +11,7 @@ import {
   StarsCanvas,
   Gallery,
 } from "./components";
+import Achievement from "./components/Achievement.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/Experience" element={<Experience />} />
           <Route path="/Projects" element={<Works />} />
+          <Route path="/Achievement" element={<Achievement />} />
         </Routes>
       </div>
     </Router>

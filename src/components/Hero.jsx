@@ -4,7 +4,7 @@ import Typed from 'typed.js';
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import "./Styles/hero.css";
-
+import Resume from "../assets/Resume.pdf";
 
 const Hero = () => {
 
@@ -46,15 +46,21 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             CSE Undergrad'24 <br className="sm:block hidden" />
-            <span class="typing"></span>
           </p>
-
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}><span class="typing"></span></p>
         </div>
       </div>
       
       <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <a
+              href={Resume}
+              target="_blank"
+              rel="noreferrer"
+            >
+            <button className="resume-button">Download Resume</button>
+      </a>
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div

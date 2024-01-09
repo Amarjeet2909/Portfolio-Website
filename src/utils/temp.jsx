@@ -1,188 +1,160 @@
-import React, { useState } from "react";
-import CloseIcon from '@material-ui/icons/Close';
-import imag1 from "../assets/Gallery/i1.jpeg";
-import imag2 from "../assets/Gallery/i2.jpg";
-import imag3 from "../assets/Gallery/i3.jpg";
-import imag4 from "../assets/Gallery/i4.jpg";
-import imag5 from "../assets/Gallery/i5.jpeg";
-import imag6 from "../assets/Gallery/i6.jpeg";
-import imag7 from "../assets/Gallery/i7.jpg";
-import imag8 from "../assets/Gallery/i8.jpg";
-import imag9 from "../assets/Gallery/i9.jpeg";
-import imag10 from "../assets/Gallery/i10.jpg";
-import imag11 from "../assets/Gallery/i11.jpg";
-import imag12 from "../assets/Gallery/i12.jpg";
-import imag13 from "../assets/Gallery/i13.jpg";
-import imag14 from "../assets/Gallery/i14.jpg";
-import imag15 from "../assets/Gallery/i15.jpeg";
-import imag16 from "../assets/Gallery/i16.jpg";
-import imag17 from "../assets/Gallery/i17.jpeg";
-import imag18 from "../assets/Gallery/i18.jpeg";
-import imag19 from "../assets/Gallery/i19.jpeg";
-import imag20 from "../assets/Gallery/i20.jpeg";
-import imag21 from "../assets/Gallery/i21.jpg";
-import imag22 from "../assets/Gallery/i22.jpg";
-import imag23 from "../assets/Gallery/i23.jpg";
-import imag24 from "../assets/Gallery/i24.jpg";
-import imag25 from "../assets/Gallery/i25.jpg";
-import imag26 from "../assets/Gallery/i26.jpg";
+// Achievement.js
 
-import "../components/Styles/gallery.css";
-import Navbar from "./Navbar";
+import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { styles } from "../styles";
+import { fadeIn, textVariant } from "../utils/motion";
+import Navbar from './Navbar';
+import '../components/Styles/achievement.css'; // Import CSS file for styling
 
-const Gallery = () => {
-    let data = [
-        {
-            id: 1,
-            imgSrc: imag1,
-        },
-        {
-            id: 2,
-            imgSrc: imag2,
-        },
-        {
-            id: 3,
-            imgSrc: imag3,
-        },
-        {
-            id: 4,
-            imgSrc: imag4,
-        },
-        {
-            id: 5,
-            imgSrc: imag5,
-        },
-        {
-            id: 6,
-            imgSrc: imag6,
-        },
-        {
-            id: 7,
-            imgSrc: imag7,
-        },
-        {
-            id: 8,
-            imgSrc: imag8,
-        },
-        {
-            id: 9,
-            imgSrc: imag9,
-        },
-        {
-            id: 10,
-            imgSrc: imag10,
-        },
-        {
-            id: 11,
-            imgSrc: imag11,
-        },
-        {
-            id: 12,
-            imgSrc: imag12,
-        },
-        {
-            id: 13,
-            imgSrc: imag13,
-        },
-        {
-            id: 14,
-            imgSrc: imag14,
-        },
-        {
-            id: 15,
-            imgSrc: imag15,
-        },
-        {
-            id: 16,
-            imgSrc: imag16,
-        },
-        {
-            id: 17,
-            imgSrc: imag17,
-        },
-        {
-            id: 18,
-            imgSrc: imag18,
-        },
-        {
-            id: 19,
-            imgSrc: imag19,
-        },
-        {
-            id: 20,
-            imgSrc: imag20,
-        },
-        {
-            id: 21,
-            imgSrc: imag21,
-        },
-        {
-            id: 22,
-            imgSrc: imag22,
-        },
-        {
-            id: 23,
-            imgSrc: imag23,
-        },
-        {
-            id: 24,
-            imgSrc: imag24,
-        },
-        {
-            id: 25,
-            imgSrc: imag25,
-        },
-        {
-            id: 26,
-            imgSrc: imag26,
-        },
-    ]
+import i1 from "../assets/Certificate/i1.png";
+import i2 from "../assets/Certificate/i2.png";
+import i3 from "../assets/Certificate/i3.png";
+import i4 from "../assets/Certificate/i4.png";
+import i5 from "../assets/Certificate/i5.png";
 
-    const [model, setModel] = useState(false);
-    const [tempImgIndex, setTempImgIndex] = useState(0);
+const Achievement = () => {
 
-    const openModal = (index) => {
-        setTempImgIndex(index);
-        setModel(true);
-    };
+  const controls = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
 
-    const closeModal = () => {
-        setModel(false);
-    };
-
-    const nextImg = () => {
-        const nextIndex = (tempImgIndex + 1) % data.length;
-        setTempImgIndex(nextIndex);
-    };
-
-    const prevImg = () => {
-        const prevIndex = (tempImgIndex - 1 + data.length) % data.length;
-        setTempImgIndex(prevIndex);
-    };
-
-    return (
-        <>
-            {/* Assume Navbar component is correctly implemented */}
-            <Navbar />
-            <div className={model ? 'model open' : 'model'}>
-                <img src={data[tempImgIndex]?.imgSrc} alt="enlarged" />
-                {/* CloseIcon component to close the modal */}
-                <CloseIcon onClick={closeModal} />
-                {/* Navigation for previous and next images */}
-                <div className="nav-buttons">
-                        <button className="prev-btn" onClick={prevImg}>Prev</button>
-                        <button className="next-btn" onClick={nextImg}>Next</button>
-                </div>
-            </div>
-            <div className="gallery">
-                {data.map((item, index) => (
-                    <div className="pics" key={index} onClick={() => openModal(index)}>
-                        <img src={item.imgSrc} style={{ width: '100%' }} alt={`img-${item.id}`} />
-                    </div>
-                ))}
-            </div>
-        </>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            controls.start('visible');
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
     );
+
+    observer.observe(document.querySelector('#sq'));
+    return () => observer.disconnect();
+    observer.observe(document.querySelector('#sp'));
+    return () => observer.disconnect();
+  }, [controls, hasAnimated]);
+
+
+const variants = {
+  hidden: {
+    opacity: 0,
+    x: -50, // Initial x position off-screen to the left
+  },
+  visible: {
+    opacity: 1,
+    x: 0, // Move to the original position (0 means no movement on x-axis)
+    transition: {
+      duration: 0.5, // Adjust the duration as needed
+      ease: 'easeOut', // Adjust the easing function
+    },
+  },
 };
 
-export default Gallery;
+  // Dummy data for certifications (replace this with your actual data)
+  const cert = [
+    { id: 1, imageSrc: i1, description: 'Certification Description 1' },
+    { id: 2, imageSrc: i2, description: 'Certification Description 2' },
+    { id: 3, imageSrc: i3, description: 'Certification Description 1' },
+    { id: 4, imageSrc: i4, description: 'Certification Description 2' },
+    { id: 5, imageSrc: i5, description: 'Certification Description 1' },
+    // Add more certification data as needed
+  ];
+
+  return (
+    <>
+    <Navbar />
+    <div className="achievement-section">
+
+    <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+      >
+        <h2 className={styles.sectionHeadText}>Certifications</h2>
+      </motion.div>
+      <motion.p
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        className="mt-3 ml-0 text-secondary text-[17px] max-w-3xl leading-[30px]"
+      >
+        These are the different certifications I have received including courses, internships, and competitions.
+      </motion.p>
+        
+      <div className="certifications">
+        {cert.map((cert) => (
+          <div className="certificate-box" key={cert.id}>
+            <img src={cert.imageSrc} alt={`Certificate ${cert.id}`} className="certificate-image" />
+            <p className="certificate-description">{cert.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="achievement-section" id='sp'>
+
+    <motion.div
+        id="sp"
+        variants={variants}
+        initial="hidden"
+        animate={controls}
+      >
+        <h2 className={styles.sectionHeadText}>Certifications</h2>
+      </motion.div>
+      <motion.p
+        variants={variants}
+        initial="hidden"
+        animate={controls}
+        className="mt-3 ml-0 text-secondary text-[17px] max-w-3xl leading-[30px]"
+      >
+        These are the different certifications I have received including courses, internships, and competitions.
+      </motion.p>
+  
+<div className="certifications">
+  {cert.map((cert) => (
+    <div className="certificate-box" key={cert.id}>
+      <img src={cert.imageSrc} alt={`Certificate ${cert.id}`} className="certificate-image" />
+      <p className="certificate-description">{cert.description}</p>
+    </div>
+  ))}
+</div>
+</div>
+
+<div className="achievement-section" id='sq'>
+
+<motion.div
+    id="sq"
+    variants={variants}
+    initial="hidden"
+    animate={controls}
+  >
+    <h2 className={styles.sectionHeadText}>Certifications</h2>
+  </motion.div>
+  <motion.p
+    variants={variants}
+    initial="hidden"
+    animate={controls}
+    className="mt-3 ml-0 text-secondary text-[17px] max-w-3xl leading-[30px]"
+  >
+    These are the different certifications I have received including courses, internships, and competitions.
+  </motion.p>
+
+<div className="certifications">
+{cert.map((cert) => (
+<div className="certificate-box" key={cert.id}>
+  <img src={cert.imageSrc} alt={`Certificate ${cert.id}`} className="certificate-image" />
+  <p className="certificate-description">{cert.description}</p>
+</div>
+))}
+</div>
+</div>
+
+    </>
+  );
+};
+
+export default Achievement;
