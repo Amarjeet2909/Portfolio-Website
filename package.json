@@ -1,10 +1,13 @@
 {
-  "name": "3dfolio",
+  "homepage": "https://Amarjeet2909.github.io/Portfolio-Website",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview"
   },
