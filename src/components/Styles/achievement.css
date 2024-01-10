@@ -130,14 +130,10 @@
     text-align: center;
   }
   
-  h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-  }
-  
-  ul {
-    list-style: none;
+  .attractive-box ul {
     padding: 0;
+    margin-left: 10px;
+    list-style-type: square; /* Apply the list-style-type property here */
   }
   
   li {
@@ -145,4 +141,49 @@
     margin-bottom: 8px;
     text-align: left;
   }
-  
+
+/* Centering the image */
+.extraImageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Adjust as needed */
+}
+
+/* Styling for the image container */
+.imageDiv {
+  text-align: center;
+}
+
+/* Styling for the image */
+.pic {
+  max-width: 50%; /* Adjust the max-width as needed */
+  max-height: 100%; /* Adjust the max-height as needed */
+  margin-left: 20%;
+  border-radius: 10px;
+  overflow: hidden; 
+  transition: transform 0.3s ease; /* Adding a transition for a smooth animation */
+}
+
+/* Animation on hover */
+.pic:hover {
+  transform: scale(1.1); /* Increasing the scale on hover */
+}
+
+@media (max-width: 480px) {
+  .extraImageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust as needed */
+  }
+
+  .pic {
+    max-width: 80%; /* Adjust the max-width as needed */
+    max-height: 100%; /* Adjust the max-height as needed */
+    margin-left: 10%;
+    border-radius: 10px;
+    overflow: hidden; 
+    transition: transform 0.3s ease; /* Adding a transition for a smooth animation */
+  }
+}

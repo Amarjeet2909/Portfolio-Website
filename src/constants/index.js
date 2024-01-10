@@ -3,7 +3,6 @@ import {
   mobile,
   backend,
   creator,
-  web,
   javascript,
   typescript,
   html,
@@ -36,6 +35,7 @@ import tnp from "../assets/company/tnp.png";
 import codingclub from "../assets/company/codingclub.jpg";
 import Shopvista from "../assets/Shopvista.png";
 import portfolio from "../assets/portfolio.png";
+import web from "../assets/web.png";
 
 export const navLinks = [
   {

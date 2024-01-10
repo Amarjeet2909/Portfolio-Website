@@ -19,6 +19,7 @@ import i13 from "../assets/Certificate/i13.png";
 import i14 from "../assets/Certificate/i14.jpg";
 import i15 from "../assets/Certificate/i15.png";
 import i16 from "../assets/Certificate/i16.jpg";
+import i17 from "../assets/Certificate/i17.png";
 
 const Achievement = () => {
 
@@ -86,8 +87,7 @@ const Achievement = () => {
       </div>
       </div>
 
-      <div className="achievement-section">
-
+    <div className="achievement-section">
     <AnimatedSection
     sectionId="competitions-section"
     heading="Competitions"
@@ -103,20 +103,45 @@ const Achievement = () => {
     </div>
     </div>
 
-    <AnimatedSection
-    sectionId="other-section"
-    heading="Competitions"
-    paragraph="Few Certificates of different coding competitions, challanges and events are here"
-    />
+    <div className="achievement-section">
+      <AnimatedSection
+      sectionId="other-section"
+      heading="Other Achievements"
+      />
     <div class="attractive-box">
-  <div class="box-content">
+    <div class="box-content">
     <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
+    <li><AnimatedSection
+      sectionId="p1"
+      paragraph="Secured Rank 1 among 1000+ participants in Code-e-Jung Coding competition organized by Celebal Technologies on HackerRank"
+      /></li>
+      <li><AnimatedSection
+      sectionId="p1"
+      paragraph="Selected for the Mi Scholarship for Undergraduate Degree Courses 2020-21 Among 499 winners from thousands of application"
+      /></li>
+      <li><AnimatedSection
+      sectionId="p1"
+      paragraph="Achieved Peoficient Tag on GeeksforGeeks by writing 16+ great viewed Articles"
+      /></li>
+            <li><AnimatedSection
+      sectionId="p1"
+      paragraph="Solved about 500+ Problems on Data Structures and Algorithms on various coding platforms including Leetcode, GfG etc"
+      /></li>
+            <li><AnimatedSection
+      sectionId="p1"
+      paragraph="Selected as one of the few recipients of the Next Generation Tech Booster Challenge Program of Udacity"
+      /></li>
     </ul>
-  </div>
-</div>
+    </div>
+    </div>
+
+    <div className='extraImageDiv'>
+       <div className='imageDiv'>
+          <img src={i17} className='pic'></img>
+       </div>
+    </div>
+
+    </div>
 
     </>
   );

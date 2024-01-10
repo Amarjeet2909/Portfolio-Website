@@ -70,9 +70,9 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      ><span class="typing1"></span>
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-3 ml-1 text-secondary text-base lg:text-lg max-w-3xl leading-normal lg:leading-[30px] text-justify"
+      >I am an 2024 undergrad in computer science engineering who has solved 500+ questions on LeetCode, GeeksforGeeks and more to improve my data structures and algorithms. I am skilled JavaScript, C/C++ and expertise in frameworks like React, Node.js. I am a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems also As a hobby, I teach C/C++ programming. Currently looking for software development engineering internship (SDE) / web dev internship/ Full-Time opportunities.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
