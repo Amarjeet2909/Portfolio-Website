@@ -1,11 +1,43 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import App from "./App";
-import "./index.css";
+import {
+  About,
+  Contact,
+  Experience,
+  Hero,
+  Navbar,
+  Tech,
+  Works,
+  StarsCanvas,
+  Gallery,
+} from "./components";
+import Achievement from "./components/Achievement.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function App() {
+  return (
+    <Router>
+      <div className="relative z-0 bg-primary">
+        <Routes>
+            <Route path="/" element={<>
+            <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <Navbar />
+            <Hero />
+            </div>
+            <About />
+            <Tech />
+            <div className="relative z-0">
+              <Contact />
+              <StarsCanvas />
+            </div>
+          </>} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/Experience" element={<Experience />} />
+          <Route path="/Projects" element={<Works />} />
+          <Route path="/Achievement" element={<Achievement />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
